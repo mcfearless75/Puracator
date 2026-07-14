@@ -3,6 +3,7 @@ import { HeroVisual } from "@/components/HeroVisual";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
+import { ProductPhoto } from "@/components/ProductPhoto";
 import {
   applications,
   benefits,
@@ -211,6 +212,11 @@ export default function Home() {
                     </span>
                   )}
                 </div>
+                <ProductPhoto
+                  file={p.image}
+                  alt={p.imageAlt}
+                  className="mt-5 aspect-[16/10] w-full"
+                />
                 <p className="mt-4 text-sm leading-relaxed text-ink/70">{p.summary}</p>
                 <ul className="mt-5 space-y-2.5">
                   {p.features.map((f) => (

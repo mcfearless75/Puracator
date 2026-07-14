@@ -3,6 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
+import { ProductPhoto } from "@/components/ProductPhoto";
 import { process, stats } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -59,6 +60,28 @@ export default function HowItWorks() {
             </Reveal>
           ))}
         </ol>
+
+        {/* the Purascope */}
+        <Reveal>
+          <div className="mt-8 grid items-center gap-8 rounded-3xl border border-ink/8 bg-white p-6 md:grid-cols-2 md:p-10">
+            <ProductPhoto
+              file="Purascope2.png.webp"
+              alt="The Puracator Purascope — the lance that delivers the water ring and steam"
+              className="aspect-square w-full"
+            />
+            <div>
+              <span className="eyebrow">The key to it all</span>
+              <h2 className="mt-4 text-2xl font-bold sm:text-3xl">Meet the Purascope</h2>
+              <p className="mt-4 text-ink/65">
+                Everything hinges on the specially designed Purascope. Fed into
+                the drain without removing a single joint, it delivers the
+                pressured 5-bar water ring and then the saturated steam right to
+                the inner wall of the pipe — reaching contamination that rodding,
+                brushing and chemicals simply leave behind.
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* the science band */}

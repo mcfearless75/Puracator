@@ -80,6 +80,8 @@ export const products = [
     id: "sf",
     name: "Puracator SF",
     kicker: "Standard Flush",
+    image: "sf-model2.png.webp",
+    imageAlt: "The compact, portable Puracator SF machine",
     summary:
       "Cleans and clears the drains of sinks, urinals and multi-deck refrigerated display cabinets without dismantling the pipework.",
     features: [
@@ -95,6 +97,8 @@ export const products = [
     id: "mf",
     name: "Puracator MF",
     kicker: "Multi-Function",
+    image: "mf.png.webp",
+    imageAlt: "The Puracator MF machine on its mobile trolley",
     summary:
       "Cleans, clears AND pasteurises the drains of sinks, urinals and multi-deck refrigerated display cabinets — the complete hygiene cycle.",
     features: [

@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
+import { ProductPhoto } from "@/components/ProductPhoto";
 import { products, applications } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -51,7 +52,13 @@ export default function Products() {
                   <h2 className="mt-3 text-3xl font-extrabold text-ink">{p.name}</h2>
                 </div>
 
-                <p className="mt-8 text-ink/70">{p.summary}</p>
+                <ProductPhoto
+                  file={p.image}
+                  alt={p.imageAlt}
+                  className="mt-8 aspect-[4/3] w-full"
+                />
+
+                <p className="mt-6 text-ink/70">{p.summary}</p>
 
                 <ul className="mt-6 space-y-3 border-t border-ink/8 pt-6">
                   {p.features.map((f) => (
@@ -72,6 +79,42 @@ export default function Products() {
             </Reveal>
           ))}
         </div>
+
+        {/* the kit */}
+        <Reveal>
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            <div className="card flex flex-col gap-5 sm:flex-row sm:items-center">
+              <ProductPhoto
+                file="Purascope2.png.webp"
+                alt="The Puracator Purascope cleaning lance"
+                className="h-40 w-full shrink-0 sm:w-40"
+              />
+              <div>
+                <h3 className="text-xl font-bold">The Purascope</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                  The specially designed lance that delivers the pressured 5-bar
+                  water ring and saturated steam deep into the pipework — reaching
+                  the full inner surface no rod or brush can.
+                </p>
+              </div>
+            </div>
+            <div className="card flex flex-col gap-5 sm:flex-row sm:items-center">
+              <ProductPhoto
+                file="bowser.png.webp"
+                alt="The Puracator water reservoir / bowser"
+                className="h-40 w-full shrink-0 sm:w-40"
+              />
+              <div>
+                <h3 className="text-xl font-bold">Water reservoir</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/65">
+                  A self-contained supply feeds the machine on site, so the
+                  Puracator goes wherever the drains are — no permanent plumbing
+                  connection required.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
 
         {/* spec comparison */}
         <Reveal>
