@@ -32,6 +32,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Turns Pages on (build type = GitHub Actions) using the workflow token,
+      # so no manual Settings → Pages step is required on first deploy.
+      - name: Enable & configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       # If a custom domain (public/CNAME) is present, serve from the root ("").
       # Otherwise serve from the project sub-path, e.g. /Puracator.
       - name: Compute base path
