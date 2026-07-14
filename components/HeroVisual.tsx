@@ -97,12 +97,17 @@ export function HeroVisual() {
         <div className="mt-6 grid grid-cols-3 gap-3">
           {[
             { k: "Water ring", v: "5 bar" },
-            { k: "Steam", v: "Saturated" },
+            { k: "Saturated", v: "Steam" },
             { k: "Dismantling", v: "None" },
           ].map((c) => (
-            <div key={c.k} className="rounded-xl border border-white/10 bg-white/5 px-3 py-3">
-              <div className="text-lg font-bold text-mist">{c.v}</div>
-              <div className="text-[0.68rem] uppercase tracking-wider text-mist/50">{c.k}</div>
+            <div
+              key={c.k}
+              className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-white/5 px-2.5 py-3"
+            >
+              <div className="text-sm font-bold text-mist sm:text-lg">{c.v}</div>
+              <div className="mt-0.5 text-[0.56rem] uppercase leading-tight tracking-normal text-mist/50 sm:text-[0.6rem]">
+                {c.k}
+              </div>
             </div>
           ))}
         </div>
