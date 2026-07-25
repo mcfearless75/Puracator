@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
+import { CleanCycle } from "@/components/CleanCycle";
 import { CtaBand } from "@/components/CtaBand";
 import { ProductPhoto } from "@/components/ProductPhoto";
 import { Breadcrumbs } from "@/components/Schema";
@@ -45,6 +46,29 @@ export default function HowItWorks() {
         }
         intro="Thanks to the specially designed Purascope, Puracator delivers a pressured ring of water at five bar that removes obstructions and surface contamination — including any biofilm on the inner pipe wall. Saturated steam then pasteurises the entire surface, and an optional treatment keeps it protected."
       />
+
+      {/* animated clean cycle */}
+      <section className="container-x pt-16 md:pt-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <Reveal>
+            <span className="eyebrow">Watch the cycle</span>
+            <h2 className="mt-5 text-3xl font-bold sm:text-4xl">
+              One pass in, one pass out — protected
+            </h2>
+            <p className="mt-4 text-ink/65">
+              The Purascope goes in, the 5-bar water ring flushes biofilm and
+              debris out to the back stack, saturated steam pasteurises the
+              inner wall — and on the way back out, Goldshield GS75 coats the
+              pipe to keep it that way.
+            </p>
+          </Reveal>
+        </div>
+        <Reveal delay={100}>
+          <div className="mt-10">
+            <CleanCycle />
+          </div>
+        </Reveal>
+      </section>
 
       {/* process steps */}
       <section className="container-x py-20 md:py-28">
