@@ -136,11 +136,14 @@ export function CleanCycle() {
           <text x="405" y="136" textAnchor="middle" fontWeight="700" fontSize="13" fill="#eafaf6" fontFamily="Inter, sans-serif">Saturated steam</text>
         </g>
 
-        {/* completion shield */}
-        <g className="cc-shield">
-          <rect x="255" y="256" width="270" height="34" rx="17" fill="rgba(163,230,53,0.14)" stroke="rgba(163,230,53,0.45)" />
-          <path d="M278 265 l6 6 10 -11" fill="none" stroke="#a3e635" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="304" y="278" fontWeight="700" fontSize="14" fill="#a3e635" fontFamily="Inter, sans-serif">Protected for months</text>
+        {/* completion shield (outer group takes the mobile up-scale so it
+            doesn't fight the inner pop animation's transform) */}
+        <g className="cc-shield-scale">
+          <g className="cc-shield">
+            <rect x="255" y="256" width="270" height="34" rx="17" fill="rgba(163,230,53,0.14)" stroke="rgba(163,230,53,0.45)" />
+            <path d="M278 265 l6 6 10 -11" fill="none" stroke="#a3e635" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <text x="304" y="278" fontWeight="700" fontSize="14" fill="#a3e635" fontFamily="Inter, sans-serif">Protected for months</text>
+          </g>
         </g>
       </svg>
 
@@ -212,4 +215,17 @@ const ccStyles = `
 @keyframes ccCap2{0%,16%{opacity:.45}18%,43%{opacity:1}45%,100%{opacity:.45}}
 @keyframes ccCap3{0%,44%{opacity:.45}46%,69%{opacity:1}71%,100%{opacity:.45}}
 @keyframes ccCap4{0%,70%{opacity:.45}72%,99%{opacity:1}100%{opacity:.45}}
+
+/* ---- mobile: the whole 920-unit scene shrinks below ~40% scale, so the
+   fine-print labels become unreadable — hide them (the phase captions below
+   carry the story) and scale the info chips up. The chips' animations only
+   drive opacity, so a static transform is safe; the shield gets its scale on
+   the wrapper group. ---- */
+@media (max-width:640px){
+  .cc-panel .cc-label{display:none}
+  .cc-chip-bar{transform-box:fill-box;transform-origin:100% 100%;transform:scale(1.55)}
+  .cc-chip-steam{transform-box:fill-box;transform-origin:50% 100%;transform:scale(1.55)}
+  .cc-chip-gs{transform-box:fill-box;transform-origin:50% 100%;transform:scale(1.45)}
+  .cc-shield-scale{transform-box:fill-box;transform-origin:center;transform:scale(1.45)}
+}
 `;
