@@ -3,6 +3,8 @@ import { HeroVisual } from "@/components/HeroVisual";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
+import { Faq } from "@/components/Faq";
+import { Marquee } from "@/components/Marquee";
 import { ProductPhoto } from "@/components/ProductPhoto";
 import {
   applications,
@@ -74,8 +76,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- CAPABILITY MARQUEE ---------- */}
+      <Marquee />
+
       {/* ---------- STATS ---------- */}
-      <section className="container-x">
+      <section className="container-x pt-16">
         <Reveal>
           <div className="grid gap-px overflow-hidden rounded-3xl border border-ink/8 bg-ink/8 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((s) => (
@@ -238,6 +243,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ---------- FAQ ---------- */}
+      <div className="pt-20 md:pt-28">
+        <Faq />
+      </div>
 
       <div className="py-20 md:py-28">
         <CtaBand />

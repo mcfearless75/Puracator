@@ -8,6 +8,13 @@
  */
 const basePath = process.env.PAGES_BASE_PATH || "";
 
+// Absolute origin the deployed site lives at — used for canonicals, the
+// sitemap, robots.txt and og:image URLs so they are correct on GitHub Pages
+// now and on the custom domain later.
+const siteUrl = basePath
+  ? `https://mcfearless75.github.io${basePath}`
+  : "https://www.puracator.co.uk";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
@@ -19,6 +26,7 @@ const nextConfig = {
   images: { unoptimized: true },
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_SITE_URL: siteUrl,
   },
 };
 

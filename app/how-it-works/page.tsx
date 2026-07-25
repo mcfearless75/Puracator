@@ -4,12 +4,14 @@ import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
 import { ProductPhoto } from "@/components/ProductPhoto";
+import { Breadcrumbs } from "@/components/Schema";
 import { process, stats } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How it works",
   description:
     "The Puracator clean cycle: a 5-bar water ring from the Purascope removes obstructions and biofilm, then saturated steam pasteurises the entire inner pipe surface — without dismantling the pipework.",
+  alternates: { canonical: "/how-it-works/" },
 };
 
 const compare = [
@@ -30,6 +32,7 @@ const compare = [
 export default function HowItWorks() {
   return (
     <>
+      <Breadcrumbs name="How it works" path="/how-it-works/" />
       <PageHero
         eyebrow="The clean cycle"
         title={

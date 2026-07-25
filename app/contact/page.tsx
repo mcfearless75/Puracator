@@ -3,12 +3,14 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { ContactForm } from "@/components/ContactForm";
+import { Breadcrumbs } from "@/components/Schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
     "Book a Puracator demonstration or ask a question. Based at Suite 7, iCentre, Howard Way, Newport Pagnell, MK16 9PY.",
+  alternates: { canonical: "/contact/" },
 };
 
 export default function Contact() {
@@ -16,6 +18,7 @@ export default function Contact() {
 
   return (
     <>
+      <Breadcrumbs name="Contact" path="/contact/" />
       <PageHero
         eyebrow="Get in touch"
         title={

@@ -3,17 +3,20 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
+import { Breadcrumbs } from "@/components/Schema";
 import { affiliated } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Affiliated products",
   description:
     "Products that pair with the Puracator system — including Goldshield GS75 long-term antimicrobial and the WhiffAway washroom hygiene range — to keep drains protected between cleans.",
+  alternates: { canonical: "/affiliated-products/" },
 };
 
 export default function Affiliated() {
   return (
     <>
+      <Breadcrumbs name="Affiliated products" path="/affiliated-products/" />
       <PageHero
         eyebrow="Better together"
         title={

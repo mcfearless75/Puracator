@@ -5,17 +5,32 @@ import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
 import { ProductPhoto } from "@/components/ProductPhoto";
+import { Breadcrumbs, JsonLd } from "@/components/Schema";
 import { products, applications } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
     "The Puracator range: the SF machine cleans and clears drains, and the MF machine adds saturated-steam pasteurisation — both without dismantling the pipework.",
+  alternates: { canonical: "/products/" },
 };
 
 export default function Products() {
   return (
     <>
+      <Breadcrumbs name="Products" path="/products/" />
+      {products.map((p) => (
+        <JsonLd
+          key={p.id}
+          data={{
+            "@type": "Product",
+            name: p.name,
+            image: `/brand/${p.image}`,
+            description: p.summary,
+            brand: { "@type": "Brand", name: "Puracator" },
+          }}
+        />
+      ))}
       <PageHero
         eyebrow="The range"
         title={

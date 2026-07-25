@@ -135,6 +135,29 @@ export const affiliated = [
   },
 ] as const;
 
+export const faqs = [
+  {
+    q: "Does Puracator really clean drains without removing any pipework?",
+    a: "Yes. The Purascope is fed into the drain in place — no joints are undone and the sink, urinal or cabinet stays exactly where it is. The pressured 5-bar water ring and saturated steam do the work from inside the pipe.",
+  },
+  {
+    q: "What's the difference between the SF and MF machines?",
+    a: "Both clean and clear the drains of sinks, urinals and multi-deck refrigerated display cabinets. The MF adds saturated-steam pasteurisation, which raises the entire inner pipe surface to a hygienic temperature — the complete clean-and-pasteurise cycle in one visit.",
+  },
+  {
+    q: "How is this better than rods or chemical drain cleaner?",
+    a: "Rodding pushes blockages along and misses the pipe wall; chemicals are harsh and temporary. Puracator's water ring strips the biofilm bonded to the inner surface, and steam pasteurises what's left — the source of odours and contamination, not just the symptom.",
+  },
+  {
+    q: "How long does the result last?",
+    a: "After cleaning, an enzyme or biocide treatment such as Goldshield GS75 can be applied to the inner pipe. It inhibits bacterial regrowth for months and significantly extends the interval between cleans.",
+  },
+  {
+    q: "Can I see it working before buying?",
+    a: "Absolutely — we recommend it. Book a demonstration and we'll clean a real drain on your own site, so you can see the before and after with no pipework removed and no mess left behind.",
+  },
+] as const;
+
 export const benefits = [
   {
     title: "No dismantling",

@@ -16,7 +16,7 @@ export function ProductPhoto({
 }) {
   return (
     <div
-      className={`relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#111] to-[#04211e] ${className}`}
+      className={`pp-tile relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#111] to-[#04211e] ${className}`}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(45,212,191,0.12),transparent_60%)]" />
       <img

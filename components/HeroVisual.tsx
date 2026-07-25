@@ -26,9 +26,10 @@ export function HeroVisual() {
           <img
             src={asset("/brand/puracator-unit4.png.webp")}
             alt="The award-winning Puracator machine — 2018 Tomorrow's Cleaning Awards finalist and a world first"
-            className="relative z-10 w-full max-w-md drop-shadow-2xl"
+            className="relative z-10 w-full max-w-md animate-float drop-shadow-2xl"
             width={860}
             height={950}
+            fetchPriority="high"
           />
         </div>
 
