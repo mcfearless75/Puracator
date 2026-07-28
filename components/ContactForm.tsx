@@ -66,7 +66,7 @@ export function ContactForm() {
           <input required type="email" value={form.email} onChange={update("email")} className={inputCls} placeholder="jane@acme.co.uk" />
         </Field>
         <Field label="Phone">
-          <input type="tel" value={form.phone} onChange={update("phone")} className={inputCls} placeholder="01908 000 000" />
+          <input type="tel" value={form.phone} onChange={update("phone")} className={inputCls} placeholder="01908 973260" />
         </Field>
       </div>
       <Field label="What do you need to clean?">
