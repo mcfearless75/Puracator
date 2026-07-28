@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a Puracator demonstration or ask a question. Based at Suite 7, iCentre, Howard Way, Newport Pagnell, MK16 9PY.",
+    "Book a Puracator demonstration or ask a question. Based at Unit 2C, Churnet Park, James Brindley Road, Leek, Staffs, ST13 8YH.",
   alternates: { canonical: "/contact/" },
 };
 

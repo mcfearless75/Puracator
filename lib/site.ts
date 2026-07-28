@@ -8,10 +8,10 @@ export const site = {
   shortTagline: "Clean drains. No dismantling. No mess.",
   contact: {
     address: {
-      line1: "Suite 7, iCentre",
-      line2: "Howard Way",
-      city: "Newport Pagnell",
-      postcode: "MK16 9PY",
+      line1: "Unit 2C, Churnet Park",
+      line2: "James Brindley Road",
+      city: "Leek, Staffs",
+      postcode: "ST13 8YH",
       country: "United Kingdom",
     },
     email: "info@puracator.co.uk",
