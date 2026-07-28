@@ -13,7 +13,7 @@ const basePath = process.env.PAGES_BASE_PATH || "";
 // now and on the custom domain later.
 const siteUrl = basePath
   ? `https://mcfearless75.github.io${basePath}`
-  : "https://www.puracator.co.uk";
+  : "https://puracator.co.uk";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -6,7 +6,7 @@ import { ScrollFx } from "@/components/ScrollFx";
 import { site } from "@/lib/site";
 
 const origin =
-  process.env.NEXT_PUBLIC_SITE_URL || `https://www.${site.domain}`;
+  process.env.NEXT_PUBLIC_SITE_URL || `https://${site.domain}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(origin),
@@ -69,7 +69,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Puracator",
-  url: `https://www.${site.domain}`,
+  url: `https://${site.domain}/`,
   description: site.tagline,
   address: {
     "@type": "PostalAddress",
@@ -78,7 +78,12 @@ const jsonLd = {
     postalCode: site.contact.address.postcode,
     addressCountry: "GB",
   },
-  email: site.contact.email,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: site.contact.phone,
+    contactType: "customer service",
+    email: site.contact.email,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

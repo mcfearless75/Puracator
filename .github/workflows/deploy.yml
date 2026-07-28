@@ -67,3 +67,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Ping IndexNow
+        run: |
+          curl -s -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "puracator.co.uk",
+              "key": "0876d72c72628c635c8915b219b0900a",
+              "keyLocation": "https://puracator.co.uk/0876d72c72628c635c8915b219b0900a.txt",
+              "urlList": [
+                "https://puracator.co.uk/",
+                "https://puracator.co.uk/how-it-works/",
+                "https://puracator.co.uk/products/",
+                "https://puracator.co.uk/affiliated-products/",
+                "https://puracator.co.uk/contact/"
+              ]
+            }' || true

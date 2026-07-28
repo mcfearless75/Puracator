@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
 import { ProductPhoto } from "@/components/ProductPhoto";
-import { Breadcrumbs, JsonLd } from "@/components/Schema";
+import { Breadcrumbs, JsonLd, siteOrigin } from "@/components/Schema";
 import { products, applications } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function Products() {
           data={{
             "@type": "Product",
             name: p.name,
-            image: `/brand/${p.image}`,
+            image: `${siteOrigin}/brand/${p.image}`,
             description: p.summary,
             brand: { "@type": "Brand", name: "Puracator" },
           }}

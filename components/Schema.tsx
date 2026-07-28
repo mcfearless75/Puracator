@@ -1,4 +1,4 @@
-const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://www.puracator.co.uk";
+const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://puracator.co.uk";
 
 /** Inject any schema.org object as JSON-LD. */
 export function JsonLd({ data }: { data: Record<string, unknown> }) {

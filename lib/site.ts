@@ -15,8 +15,8 @@ export const site = {
       country: "United Kingdom",
     },
     email: "info@puracator.co.uk",
-    phone: "+44 (0)1908 000 000",
-    phoneHref: "tel:+441908000000",
+    phone: "+44 (0)1908 973260",
+    phoneHref: "tel:+441908973260",
   },
 } as const;
 
